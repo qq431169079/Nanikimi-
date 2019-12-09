@@ -1,0 +1,72 @@
+.form-control
+{
+  color:#FFF;
+  border:1px solid #fff;
+  background: rgba(0, 0, 0, 0.48);
+}
+.form-control:focus
+{
+  color:#FFF;
+  background: rgba(0, 0, 0, 0.60);
+  border:1px solid #fff;
+}
+.form-control[disabled]
+{
+  color:#000;
+  cursor:not-allowed;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+
+.rating 
+{
+  position: absolute;
+  top: 28%;
+  Left: 51%;
+  transform: translate(-52%,-50%) rotateY(180deg);
+  display: flex;
+
+}
+.rating input
+{
+  display: none;
+}
+.rating label
+{
+  display: block;
+  cursor: pointer;
+  width: 50px;
+
+}
+.rating label::before
+{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 40px;
+  color: #101010;
+}
+.rating label:after
+{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 40px;
+  color: gold;
+  top: 0;
+  opacity: 0;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.rating label:hover::after,
+.rating input:checked ~ label:after
+{
+  opacity: 1;
+}
